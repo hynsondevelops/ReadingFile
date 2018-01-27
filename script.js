@@ -1,4 +1,4 @@
-var Introduction2 = ["You were able to create a comfortable learning environment by warmly greeting the student at the start of class, and asking rapport building questions to ease the student into the lesson.", true]
+ var Introduction2 = ["You were able to create a comfortable learning environment by warmly greeting the student at the start of class, and asking rapport building questions to ease the student into the lesson.", true]
 var Introduction1 = ["You greeted the student at the beginning of the class in a somewhat natural fashion. In order to improve the student's learning experience, ask at least one rapport builidng question at the start of class.", false]
 var Introduction0 = ["You started the class without any introduction of yourself. VIPKID teachers should create a strong learning environment for its students by welcoming them into class in a warm fashion.", false]
 var ClassTime2 = ["You covered all the material on the slides and paced yourself well.", true]
@@ -73,116 +73,202 @@ function feedback()
 	var form = document.getElementById("formL1");
 	var goodParagraph = '';
 	var badParagraph = '';
-	
+	var lookup = 'Introduction' + form.Introduction.value;
+	if (window[lookup][1])
+	{
+	goodParagraph += 'Introduction' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	else
+	{
+	badParagraph += 'Introduction' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	var lookup = 'ClassTime' + form.ClassTime.value;
+	if (window[lookup][1])
+	{
+	goodParagraph += 'Class Time' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	else
+	{
+	badParagraph += 'Class Time' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	var lookup = 'LessonPreparation' + form.LessonPreparation.value;
+	if (window[lookup][1])
+	{
+	goodParagraph += 'Lesson Preparation' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	else
+	{
+	badParagraph += 'Lesson Preparation' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	var lookup = 'SupplementaryTools' + form.SupplementaryTools.value;
+	if (window[lookup][1])
+	{
+	goodParagraph += 'Supplementary Tools' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	else
+	{
+	badParagraph += 'Supplementary Tools' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	var lookup = 'Visibletool' + form.Visibletool.value;
+	if (window[lookup][1])
+	{
+	goodParagraph += 'Visible tool' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	else
+	{
+	badParagraph += 'Visible tool' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	var lookup = 'masteryofEnglish' + form.masteryofEnglish.value;
+	if (window[lookup][1])
+	{
+	goodParagraph += 'mastery of English ' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	else
+	{
+	badParagraph += 'mastery of English ' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	var lookup = 'SpeakingSpeed' + form.SpeakingSpeed.value;
+	if (window[lookup][1])
+	{
+	goodParagraph += 'Speaking Speed' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	else
+	{
+	badParagraph += 'Speaking Speed' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	var lookup = 'IncidentalLanguage' + form.IncidentalLanguage.value;
+	if (window[lookup][1])
+	{
+	goodParagraph += 'Incidental Language' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	else
+	{
+	badParagraph += 'Incidental Language' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	var lookup = 'TPR' + form.TPR.value;
+	if (window[lookup][1])
+	{
+	goodParagraph += 'TPR' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	else
+	{
+	badParagraph += 'TPR' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	var lookup = 'Modeling' + form.Modeling.value;
+	if (window[lookup][1])
+	{
+	goodParagraph += 'Modeling' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	else
+	{
+	badParagraph += 'Modeling' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	var lookup = 'FullSentences' + form.FullSentences.value;
+	if (window[lookup][1])
+	{
+	goodParagraph += 'Full Sentences' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	else
+	{
+	badParagraph += 'Full Sentences' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	var lookup = 'Corrections' + form.Corrections.value;
+	if (window[lookup][1])
+	{
+	goodParagraph += 'Corrections' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	else
+	{
+	badParagraph += 'Corrections' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	var lookup = 'Repetition' + form.Repetition.value;
+	if (window[lookup][1])
+	{
+	goodParagraph += 'Repetition' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	else
+	{
+	badParagraph += 'Repetition' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	var lookup = 'ResponsetoFeedback' + form.ResponsetoFeedback.value;
+	if (window[lookup][1])
+	{
+	goodParagraph += 'Response to Feedback' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	else
+	{
+	badParagraph += 'Response to Feedback' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	var lookup = 'LessonContent' + form.LessonContent.value;
+	if (window[lookup][1])
+	{
+	goodParagraph += 'Lesson Content' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	else
+	{
+	badParagraph += 'Lesson Content' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	var lookup = 'Extend' + form.Extend.value;
+	if (window[lookup][1])
+	{
+	goodParagraph += 'Extend' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	else
+	{
+	badParagraph += 'Extend' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	var lookup = 'StudentOutput' + form.StudentOutput.value;
+	if (window[lookup][1])
+	{
+	goodParagraph += 'Student Output' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	else
+	{
+	badParagraph += 'Student Output' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	var lookup = 'Patience' + form.Patience.value;
+	if (window[lookup][1])
+	{
+	goodParagraph += 'Patience' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	else
+	{
+	badParagraph += 'Patience' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	var lookup = 'Interactivity' + form.Interactivity.value;
+	if (window[lookup][1])
+	{
+	goodParagraph += 'Interactivity' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	else
+	{
+	badParagraph += 'Interactivity' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	var lookup = 'energy' + form.energy.value;
+	if (window[lookup][1])
+	{
+	goodParagraph += 'energy' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	else
+	{
+	badParagraph += 'energy' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	var lookup = 'reward' + form.reward.value;
+	if (window[lookup][1])
+	{
+	goodParagraph += 'reward' + ': ' + window[lookup][0] + '<br><br>';
+	}
+	else
+	{
+	badParagraph += 'reward' + ': ' + window[lookup][0] + '<br><br>';
+	}
 
-var lookup = 'Introduction' + form.Introduction.value;
-if (window[lookup][1]){
-goodParagraph += window[lookup][0];}
-else{
-badParagraph += window[lookup][0];}
-var lookup = 'ClassTime' + form.ClassTime.value;
-if (window[lookup][1]){
-goodParagraph += window[lookup][0];}
-else{
-badParagraph += window[lookup][0];}
-var lookup = 'LessonPreparation' + form.LessonPreparation.value;
-if (window[lookup][1]){
-goodParagraph += window[lookup][0];}
-else{
-badParagraph += window[lookup][0];}
-var lookup = 'SupplementaryTools' + form.SupplementaryTools.value;
-if (window[lookup][1]){
-goodParagraph += window[lookup][0];}
-else{
-badParagraph += window[lookup][0];}
-var lookup = 'Visibletool' + form.Visibletool.value;
-if (window[lookup][1]){
-goodParagraph += window[lookup][0];}
-else{
-badParagraph += window[lookup][0];}
-var lookup = 'masteryofEnglish' + form.masteryofEnglish.value;
-if (window[lookup][1]){
-goodParagraph += window[lookup][0];}
-else{
-badParagraph += window[lookup][0];}
-var lookup = 'SpeakingSpeed' + form.SpeakingSpeed.value;
-if (window[lookup][1]){
-goodParagraph += window[lookup][0];}
-else{
-badParagraph += window[lookup][0];}
-var lookup = 'IncidentalLanguage' + form.IncidentalLanguage.value;
-if (window[lookup][1]){
-goodParagraph += window[lookup][0];}
-else{
-badParagraph += window[lookup][0];}
-var lookup = 'TPR' + form.TPR.value;
-if (window[lookup][1]){
-goodParagraph += window[lookup][0];}
-else{
-badParagraph += window[lookup][0];}
-var lookup = 'Modeling' + form.Modeling.value;
-if (window[lookup][1]){
-goodParagraph += window[lookup][0];}
-else{
-badParagraph += window[lookup][0];}
-var lookup = 'FullSentences' + form.FullSentences.value;
-if (window[lookup][1]){
-goodParagraph += window[lookup][0];}
-else{
-badParagraph += window[lookup][0];}
-var lookup = 'Corrections' + form.Corrections.value;
-if (window[lookup][1]){
-goodParagraph += window[lookup][0];}
-else{
-badParagraph += window[lookup][0];}
-var lookup = 'Repetition' + form.Repetition.value;
-if (window[lookup][1]){
-goodParagraph += window[lookup][0];}
-else{
-badParagraph += window[lookup][0];}
-var lookup = 'ResponsetoFeedback' + form.ResponsetoFeedback.value;
-if (window[lookup][1]){
-goodParagraph += window[lookup][0];}
-else{
-badParagraph += window[lookup][0];}
-var lookup = 'LessonContent' + form.LessonContent.value;
-if (window[lookup][1]){
-goodParagraph += window[lookup][0];}
-else{
-badParagraph += window[lookup][0];}
-var lookup = 'Extend' + form.Extend.value;
-if (window[lookup][1]){
-goodParagraph += window[lookup][0];}
-else{
-badParagraph += window[lookup][0];}
-var lookup = 'StudentOutput' + form.StudentOutput.value;
-if (window[lookup][1]){
-goodParagraph += window[lookup][0];}
-else{
-badParagraph += window[lookup][0];}
-var lookup = 'Patience' + form.Patience.value;
-if (window[lookup][1]){
-goodParagraph += window[lookup][0];}
-else{
-badParagraph += window[lookup][0];}
-var lookup = 'Interactivity' + form.Interactivity.value;
-if (window[lookup][1]){
-goodParagraph += window[lookup][0];}
-else{
-badParagraph += window[lookup][0];}
-var lookup = 'energy' + form.energy.value;
-if (window[lookup][1]){
-goodParagraph += window[lookup][0];}
-else{
-badParagraph += window[lookup][0];}
-var lookup = 'reward' + form.reward.value;
-if (window[lookup][1]){
-goodParagraph += window[lookup][0];}
-else{
-badParagraph += window[lookup][0];}
 	var good = document.getElementById("goodParagraph");
 	var bad = document.getElementById("badParagraph");
 	good.innerHTML=goodParagraph;
 	bad.innerHTML=badParagraph;
+	window.location="#goodParagraph"
 
 }
+
+
